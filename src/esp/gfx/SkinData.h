@@ -50,6 +50,8 @@ struct Rig {
   /** @brief Nodes that control the articulations of a skinned model instance.
    */
   std::vector<scene::SceneNode*> bones;
+  //std::vector<std::unique_ptr<scene::SceneNode>> bones; // Edited by Rashid
+
   /** @brief Bone name to 'bones' index map. */
   std::unordered_map<std::string, int> boneNames;
 };

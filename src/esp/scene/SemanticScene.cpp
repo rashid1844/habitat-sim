@@ -109,38 +109,39 @@ bool SemanticScene::loadSemanticSceneDescriptor(
               << "SSD for Replica using constructed file : `"
               << constructedFilename << "` in directory with `" << ssdFileName
               << "` loaded successfully";
-        } else {
+        } //else {
           // here if constructed file exists but does not correspond to
           // appropriate SSD or some loading error occurred.
-          ESP_ERROR(Mn::Debug::Flag::NoSpace)
-              << "SSD Load Failure! Replica file with constructed name `"
-              << ssdFileName << "` exists but failed to load.";
-        }
-      } else {
+          //ESP_ERROR(Mn::Debug::Flag::NoSpace)
+          //    << "SSD Load Failure! Replica file with constructed name `"
+          //    << ssdFileName << "` exists but failed to load.";
+        //}  // commented by Rashid
+      } //else {
         // neither provided non-empty filename nor constructed filename
         // exists. This is probably due to an incorrect naming in the
         // SemanticAttributes
-        ESP_WARNING(Mn::Debug::Flag::NoSpace)
-            << "SSD File Naming Issue! Neither "
-               "SemanticAttributes-provided name : `"
-            << ssdFileName << "` nor constructed filename : `"
-            << constructedFilename << "` exist on disk.";
-        loadSuccess = false;
-      }
+       // ESP_WARNING(Mn::Debug::Flag::NoSpace)
+       //     << "SSD File Naming Issue! Neither "
+       //        "SemanticAttributes-provided name : `"
+       //     << ssdFileName << "` nor constructed filename : `"
+       //     << constructedFilename << "` exist on disk.";
+       // loadSuccess = false;
+      // }
     }
 
     if (loadSuccess) {
       ESP_DEBUG(Mn::Debug::Flag::NoSpace)
           << "SSD with SemanticAttributes-provided name `" << ssdFileName
           << "` successfully found and loaded.";
-    } else {
+    } //else {
       // here if provided file exists but does not correspond to appropriate
       // SSD
-      ESP_ERROR(Mn::Debug::Flag::NoSpace)
-          << "SSD Load Failure! File with "
-             "SemanticAttributes-provided name `"
-          << ssdFileName << "` exists but failed to load.";
-    }
+      //ESP_ERROR(Mn::Debug::Flag::NoSpace)
+     //     << "SSD Load Failure! File with "
+     //        "SemanticAttributes-provided name `"
+     //     << ssdFileName << "` exists but failed to load.";
+    //} // commented by Rashid
+  
   }
 
   if (semanticAttr != nullptr) {

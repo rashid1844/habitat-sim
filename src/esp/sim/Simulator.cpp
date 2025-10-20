@@ -592,9 +592,9 @@ bool Simulator::instanceStageForSceneAttributes(
         semanticSceneMeshLoaded_ = false;
         // TODO: programmatic generation of semantic meshes when no
         // annotations are provided.
-        ESP_WARNING() << "The active scene does not contain semantic "
-                         "annotations : activeSemanticSceneID_ ="
-                      << activeSemanticSceneID_;
+        //ESP_WARNING() << "The active scene does not contain semantic "
+        //                 "annotations : activeSemanticSceneID_ ="
+        //              << activeSemanticSceneID_; // commented by rashid
       }
     }
   }  // if ID has changed - needs to be reset

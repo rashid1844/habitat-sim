@@ -104,10 +104,10 @@ bool SceneDatasetAttributes::addNewSceneInstanceToDataset(
   // default.
   if (lightLayoutAttributesManager_->getFullAttrNameFromStr(lightHandle) ==
       "") {
-    ESP_WARNING(Mn::Debug::Flag::NoSpace)
-        << infoPrefix << "Lighting Layout Attributes '" << lightHandle
-        << "' specified in Scene Attributes but does not exist in dataset, "
-           "so creating default.";
+    //ESP_WARNING(Mn::Debug::Flag::NoSpace)
+    //    << infoPrefix << "Lighting Layout Attributes '" << lightHandle
+    //    << "' specified in Scene Attributes but does not exist in dataset, "
+     //      "so creating default.";
     lightLayoutAttributesManager_->createObject(lightHandle, true);
   } else {
     ESP_VERY_VERBOSE(Mn::Debug::Flag::NoSpace)

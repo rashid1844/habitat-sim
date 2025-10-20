@@ -27,9 +27,10 @@ void RigManager::deleteRigInstance(int rigId) {
   ESP_CHECK(rigIt != _rigInstances.end(),
             "The specified rig instance id isn't known by rig manager or "
             "was already deleted.");
-  for (auto* bone : getRigInstance(rigId).bones) {
-    delete bone;
-  }
+  //for (auto* bone : getRigInstance(rigId).bones) {
+  //  delete bone;
+  //} // Commented by Rashid
+  
   _rigInstances.erase(rigIt);
 }
 
